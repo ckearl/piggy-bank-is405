@@ -1,0 +1,67 @@
+/* src/components/SavingsTracker.css */
+@import "font-awesome/css/font-awesome.min.css";
+
+.page-container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  /* Add any other styling for the main content here */
+}
+
+.savings-form {
+  background-color: #6ba3ff;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 50px;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  color: #000;
+  font-family: "Comic Sans MS", cursive;
+  position: relative; /* Add a relative position */
+}
+
+.savings-form h1 {
+  position: absolute; /* Add absolute position for the title */
+  top: -30px; /* Adjust the top value to move the title over the box */
+  right: 10px; /* Adjust the right value to align the title to the right */
+  background-color: #6ba3ff;
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.savings-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.savings-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 18px;
+}
+
+.savings-form button {
+  background-color: #fff;
+  color: #6ba3ff;
+  border: none;
+  padding: 16px 30px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", cursive;
+}
