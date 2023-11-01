@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Bootstrap.css";
+import "./Calendar.css";
 
 class Calendar extends Component {
   constructor(props) {
@@ -89,14 +90,10 @@ class Calendar extends Component {
       calendarRows.push(<tr key={row}>{calendarCells}</tr>);
     }
 
-    const cellWidth = `${1 / 7}%`;
-    const dayOfMonthHeight = "10vh";
-    const dayOfWeekHeight = "5vh";
-
     return (
       <div className="parent-calendar" style={{ width: "70%" }}>
         <table>
-          <th colSpan="7">
+          <th colSpan="7" className="calendar-table-head">
             <div>
               <h3 style={{ color: "color" }}>
                 {new Intl.DateTimeFormat("en-US", { month: "long" }).format(
@@ -105,7 +102,7 @@ class Calendar extends Component {
               </h3>
 
               <select
-                class="btn btn-secondary btn-sm dropdown-toggle"
+                class="calendar-select btn btn-secondary btn-sm dropdown-toggle"
                 onChange={this.handleMonthChange}
                 value={this.state.selectedMonth}
               >
@@ -138,53 +135,6 @@ class Calendar extends Component {
             {calendarRows}
           </tbody>
         </table>
-        <style>{`
-          .parent-calendar {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            background-color: #f5743e;
-            border: 5px solid white;
-            border-radius: 15px;
-            padding: 10px;
-          }
-          .days-of-week-row {
-            height: ${dayOfWeekHeight};
-          }
-          th {
-            text-align: top;
-          }
-          th div {
-            display: flex;
-            align-items: start;
-            justify-content: space-between;
-          }
-          tr {
-            margin: 10%;
-          }
-          select {
-            width: 30%;
-          }
-          .days-of-month-cell {
-            align-items: start;
-            height: ${dayOfMonthHeight};
-            width: ${cellWidth};
-            margin: 10%;
-            padding: 0.5%;
-            background-color: white;
-            border-radius: 15px;
-          }
-          .today {
-            background-color: #65cfa7;
-            color: white;
-            height: ${dayOfMonthHeight};
-            width: ${cellWidth};
-            margin: 10%;
-            padding: 0.5%;
-            border-radius: 15px;
-          }
-        `}</style>
       </div>
     );
   }
