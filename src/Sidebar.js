@@ -12,22 +12,22 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="icon-container">
-        <a href="PiggyBank">
+        <a href="#PiggyBank">
           <FontAwesomeIcon icon={faPiggyBank} /> {/* Piggy bank icon */}
         </a>
       </div>
       <div className="icon-container">
-        <a href="PieChart">
+        <a href="#PieChart">
           <FontAwesomeIcon icon={faChartPie} /> {/* Pie chart icon */}
         </a>
       </div>
       <div className="icon-container">
-        <a href="Calendar">
+        <a href="#Calendar">
           <FontAwesomeIcon icon={faCalendarAlt} /> {/* Calendar icon */}
         </a>
       </div>
       <div className="icon-container">
-        <a href="Games">
+        <a href="#Games">
           <FontAwesomeIcon icon={faGamepad} /> {/* Game controller icon */}
         </a>
       </div>

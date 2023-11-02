@@ -66,13 +66,16 @@ class Calendar extends Component {
           }
         } else {
           if (currentDay <= daysInMonth) {
-            if (currentDay === new Date().getDate() && this.state.selectedMonth === new Date().getMonth()) {
+            if (
+              currentDay === new Date().getDate() &&
+              this.state.selectedMonth === new Date().getMonth()
+            ) {
               calendarCells.push(
                 <td className="today" key={currentDay}>
                   {currentDay}
                 </td>
               );
-            } else  {
+            } else {
               calendarCells.push(
                 <td className="days-of-month-cell" key={currentDay}>
                   {currentDay}

@@ -8,8 +8,10 @@ import "./Calendar.css";
 function App() {
   return (
     <div className="App">
-      <SavingsTracker />
-      <div className="calendar-container">
+      <div id="PiggyBank">
+        <SavingsTracker />
+      </div>
+      <div className="calendar-container" id="Calendar">
         <Calendar />
       </div>
     </div>
