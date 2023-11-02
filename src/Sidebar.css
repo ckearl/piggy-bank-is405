@@ -1,0 +1,37 @@
+.sidebar {
+  width: 150px;
+  background: #dc4673; /* Sidebar background color */
+  color: #fff; /* Sidebar text color */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* Fix the position of the sidebar */
+  top: 0; /* Stick it to the top of the viewport */
+  left: 0; /* Stick it to the left of the viewport */
+  height: 95vh; /* Set the height to 100% of the viewport height */
+  justify-content: space-between;
+}
+
+.sidebar-item {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0; /* Adjust the margin to space out items vertically */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px; /* Adjust the width and height as needed */
+  height: 100px;
+  background-color: white; /* White circular background */
+  border-radius: 50%; /* Creates a circular shape */
+  margin: 10px; /* Add margin for spacing */
+}
+
+/* Styles for the FontAwesome icons */
+.icon-container .svg-inline--fa {
+  font-size: 50px; /* Adjust the icon size as needed */
+  color: black;
+}
