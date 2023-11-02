@@ -23,7 +23,7 @@ const SavingsTracker = () => {
     <div>
       <div className="page-container">
         <Sidebar /> {/* Include the Sidebar component */}
-        <div className="content">
+        <div className="content" id="PiggyBank">
           <h1>Savings Tracker</h1>
           <form className="savings-form" onSubmit={handleFormSubmit}>
             <div>

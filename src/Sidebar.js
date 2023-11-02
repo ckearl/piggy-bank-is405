@@ -12,16 +12,24 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="icon-container">
-        <FontAwesomeIcon icon={faPiggyBank} /> {/* Piggy bank icon */}
+        <a href="PiggyBank">
+          <FontAwesomeIcon icon={faPiggyBank} /> {/* Piggy bank icon */}
+        </a>
       </div>
       <div className="icon-container">
-        <FontAwesomeIcon icon={faChartPie} /> {/* Pie chart icon */}
+        <a href="PieChart">
+          <FontAwesomeIcon icon={faChartPie} /> {/* Pie chart icon */}
+        </a>
       </div>
       <div className="icon-container">
-        <FontAwesomeIcon icon={faCalendarAlt} /> {/* Calendar icon */}
+        <a href="Calendar">
+          <FontAwesomeIcon icon={faCalendarAlt} /> {/* Calendar icon */}
+        </a>
       </div>
       <div className="icon-container">
-        <FontAwesomeIcon icon={faGamepad} /> {/* Game controller icon */}
+        <a href="Games">
+          <FontAwesomeIcon icon={faGamepad} /> {/* Game controller icon */}
+        </a>
       </div>
     </div>
   );
