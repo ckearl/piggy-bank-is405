@@ -1,13 +1,27 @@
 // src/components/SavingsTracker.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SavingsTracker.css"; // Import the CSS file for styling
 import Sidebar from "./Sidebar"; // Import the Sidebar component
+import { ArcElement } from "chart.js";
+import ChartJS from "chart.js/auto";
+import { Pie } from "react-chartjs-2";
 
+ChartJS.register(ArcElement);
 const SavingsTracker = () => {
   const [dailyEarnings, setDailyEarnings] = useState("");
   const [currentSavings, setCurrentSavings] = useState("");
   const [goalAmount, setGoalAmount] = useState("");
   const [giving, setGiving] = useState("");
+
+  const [chartData, setChartData] = useState({
+    labels: ["Daily Earnings", "Current Savings", "Goal Amount", "Giving"],
+    datasets: [
+      {
+        data: [dailyEarnings, currentSavings, goalAmount, giving],
+        backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384", "#FFCE57"],
+      },
+    ],
+  });
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +33,18 @@ const SavingsTracker = () => {
     });
   };
 
+  useEffect(() => {
+    setChartData({
+      labels: ["Daily Earnings", "Current Savings", "Goal Amount", "Giving"],
+      datasets: [
+        {
+          data: [dailyEarnings, currentSavings, goalAmount, giving],
+          backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384", "#FF9C36"],
+        },
+      ],
+    });
+  }, [dailyEarnings, currentSavings, goalAmount, giving]);
+
   return (
     <div>
       <div className="page-container">
@@ -26,7 +52,7 @@ const SavingsTracker = () => {
         <div className="content">
           <h1>Savings Tracker</h1>
           <form className="savings-form" onSubmit={handleFormSubmit}>
-            <div>
+            <div id="PiggyBank">
               <label htmlFor="dailyEarnings">Daily Earnings:</label>
               <input
                 type="number"
@@ -64,6 +90,12 @@ const SavingsTracker = () => {
             </div>
             <button type="submit">Submit</button>
           </form>
+
+          {/* Render the Pie chart component */}
+          <div className="PieChart" id="PieChart">
+            <h2>Pie Chart</h2>
+            <Pie data={chartData} />
+          </div>
         </div>
       </div>
     </div>
