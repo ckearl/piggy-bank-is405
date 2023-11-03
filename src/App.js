@@ -4,10 +4,14 @@ import React from "react";
 import SavingsTracker from "./SavingsTracker";
 import Calendar from "./Calendar";
 import "./Calendar.css";
+import PieChart from "./PieChart";
 
 function App() {
   return (
     <div className="App">
+      <div id="PieChart">
+        <PieChart />
+      </div>
       <div id="PiggyBank">
         <SavingsTracker />
       </div>
