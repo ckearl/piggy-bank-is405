@@ -1,0 +1,31 @@
+.target {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  text-align: center;
+  margin: 20px;
+  position: absolute;
+  left: 60%;
+  top: 30%;
+}
+
+.draggable {
+  width: 75px;
+  height: 75px;
+  background-color: lightgreen;
+  text-align: center;
+  line-height: 50px;
+  margin: 20px;
+  cursor: grab;
+  transition: transform 1s, opacity 1s; /* Animation duration */
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Elements on opposite ends */
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+}
+body {
+  background-color: grey;
+}
