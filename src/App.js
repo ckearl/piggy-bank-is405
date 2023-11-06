@@ -7,14 +7,14 @@ import "./Calendar.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App App-background">
       <div>
         <SavingsTracker />
       </div>
       <div className="calendar-container" id="Calendar">
         <Calendar />
       </div>
-      <div>
+      <div className="game-border-radius" id="Games" style={{ borderRadius: "15px", overflow: "hidden" }}>
         {/* Embed the ToiletGame component in an iframe */}
         <iframe
           src="/toilet.html" // Replace with the actual path to your toiletgame.html file

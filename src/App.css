@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.game-border-radius {
+  border-radius: 15px;
+}
+
+.App-background {
+  background-color: #f9e1ad;
+  font-family: 'Comic Sans MS', cursive;
+}
